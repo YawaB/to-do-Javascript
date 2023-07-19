@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <title>TodoList</title>
+</head>
+
+<body class="font-serif" onload="initPage()">
+    <div class="h-[100vh] w-full overflow-hidden">
+        <h1 class="flex justify-center text-pink-600 text-center font-bold text-4xl relative top-2 mb-9">MY TO DO <img
+                src="images/icon.png" alt="icon" width="40px" class="mx-2"></h1>
+        <div class="w-full flex flex-col-reverse sm:flex-row w-7xl h-4/5 mx-auto gap-3 sm:gap-0 ">
+            <div class="flex flex-col border-r sm:w-1/2 overflow-auto h-full gap-3">
+                <div class="flex flex-col justify-center items-center h-full" id="nothing">
+                    <img class="w-1/2" src="images/noTodo.svg" alt="no-todo">
+                    <p>No to do for the moment</p>
+                </div>
+                <div id="listTask"></div>
+            </div>
+            <div class="flex sm:w-1/2 h-7xl items-center">
+                <div class="flex flex-col border rounded shadow p-5 w-4/5 mx-auto gap-9">
+                    <h1 class="text-pink-600 text-center font-bold text-xl">NEW TO DO</h1>
+                    <form method="post">
+                        <div class="flex px-auto gap-2">
+                            <input class="w-3/4 border rounded p-1" id="input-box" type="text" name="new-todo"
+                                placeholder="Something to do">
+                            <input class="w-1/4 text-pink-100 bg-pink-600 border rounded p-1" type="submit" id="add"
+                                name="new-todo-submit" value="Add">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="alert flex justify-start gap-2 fixed top-2 -right-[100%] transition-all duration-900" id="alert">
+            <span class="closebtn text-center" id="closebtn">&times;</span>
+            <span id="alert-message"></span>
+        </div>
+        <footer class="w-full h-20 sm:h-10 bg-pink-100 flex flex-col justify-center absolute left-0 bottom-0">
+            <p class="text-pink-600 text-center">© 2023 Brinda_vi - All Rights are Reserved.</p>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
